@@ -1,12 +1,13 @@
-import { Container, Grid, Grid2, styled, Typography } from "@mui/material"
+import {Container, Grid, styled, Typography } from "@mui/material"
 import avatar from "../../../../assets/images/avatar.jpeg"
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import ContactMailIcon from "@mui/icons-material/ContactMail"
+import StyledButton from "../../../../components/StyledButton/StyledButton";
 
 const Hero = () => {
 
-    const StyledHero = styled("div")(() => ({
-        background: "Black",
+    const StyledHero = styled("div")(({theme}) => ({
+        background: theme.palette.primary.main,
         height: "100vh"
     }))
 
@@ -28,23 +29,23 @@ const Hero = () => {
                             <StyledImg src={avatar} />
                         </Grid>
                         <Grid item xs={12} md={8}>
-                            <Typography color="primary" variant="h1" textAlign="center">Gabriel Batista</Typography>
-                            <Typography color="primary" variant="h2" textAlign="center">Meu Portifolio</Typography>
+                            <Typography color="primary.contrastText" variant="h1" textAlign="center">Gabriel Batista</Typography>
+                            <Typography color="primary.contrastText" variant="h2" textAlign="center">Meu Portifolio</Typography>
                             <Grid container display="flex" justifyContent="center" >
 
                                 <Grid item xs={12} md={4} display={"flex"} justifyContent="center">
-                                    <button>
-                                        <FileDownloadIcon />
+                                    <StyledButton>
+                                        <FileDownloadIcon /> 
                                         contato
-                                        </button>
+                                        </StyledButton>
                                 </Grid>
 
 
                                 <Grid item xs={12} md={4} display={"flex"} justifyContent="center">
-                                    <button>
+                                    <StyledButton>
                                         <ContactMailIcon />
                                         Linkedin
-                                    </button>
+                                    </StyledButton>
                                 </Grid>
 
 

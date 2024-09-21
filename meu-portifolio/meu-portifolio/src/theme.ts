@@ -1,4 +1,4 @@
-import { RemoveShoppingCartSharp } from '@mui/icons-material';
+
 import { createTheme, responsiveFontSizes } from '@mui/material/';
 
 
@@ -22,5 +22,5 @@ theme = responsiveFontSizes(theme);
 
 export default theme;  
 
-Gabriel
+
 
